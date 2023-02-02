@@ -3,11 +3,11 @@ import server from "http-server";
 import path from "path";
 
 (async () => {
-  const server = server.createServer({
+  const serverObject = server.createServer({
     root: path.join(process.cwd(), "dist"),
   });
 
-  server.listen(8080, "0.0.0.0", async function () {
+  serverObject.listen(8080, "0.0.0.0", async function () {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto("http://127.0.0.1:8080/", { waitUntil: "networkidle0" });
@@ -19,6 +19,6 @@ import path from "path";
       format: "A4",
     });
     await browser.close();
-    server.close();
+    serverObject.close();
   });
 })();
