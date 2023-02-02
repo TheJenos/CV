@@ -14,9 +14,9 @@ import path from "path";
     await page.emulateMediaType("screen");
     await page.pdf({
       path: "dist/cv.pdf",
-      margin: { top: "10px", right: "5px", bottom: "10px", left: "5px" },
+      margin: { top: "5px", right: "5px", bottom: "5px", left: "5px" },
       printBackground: true,
-      format: "A4",
+      format: "letter",
     });
     await browser.close();
     serverObject.close();
