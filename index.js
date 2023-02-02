@@ -13,7 +13,7 @@ import path from "path";
     await page.goto("http://127.0.0.1:8080/", { waitUntil: "networkidle0" });
     await page.emulateMediaType("screen");
     await page.pdf({
-      path: "cv.pdf",
+      path: "dist/cv.pdf",
       margin: { top: "10px", right: "5px", bottom: "10px", left: "5px" },
       printBackground: true,
       format: "A4",
