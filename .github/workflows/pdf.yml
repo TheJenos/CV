@@ -21,7 +21,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .
+          file: dist
           asset_name: cv.pdf
           tag: ${{ github.ref }}
           overwrite: true
