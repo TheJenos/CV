@@ -16,7 +16,7 @@ import path from "path";
       path: "dist/cv.pdf",
       margin: { top: "5px", right: "5px", bottom: "5px", left: "5px" },
       printBackground: true,
-      format: "letter",
+      format: "a4",
     });
     await browser.close();
     serverObject.close();
